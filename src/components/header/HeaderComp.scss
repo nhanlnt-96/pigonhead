@@ -23,6 +23,7 @@
     &:hover {
       background-color: $fourth-color !important;
       letter-spacing: 5px;
+      color: #ffffff !important;
     }
   }
 
@@ -79,7 +80,7 @@
 .css-ilg2nx-MuiPaper-root-MuiAppBar-root {
   background-color: $fourth-color !important;
 
-  .header-comp-menu-item{
+  .header-comp-menu-item {
     &:hover {
       background-color: #ffffff !important;
       letter-spacing: 5px;
