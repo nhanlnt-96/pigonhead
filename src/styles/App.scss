@@ -5,3 +5,15 @@
 * {
   font-family: 'Poppins', sans-serif !important;
 }
+
+.comp-height {
+  min-height: 100vh;
+  padding-top: 79px;
+  padding-bottom: 24px;
+  @include mobile {
+    padding-top: 64px !important;
+  }
+  @include tablet {
+    padding-top: 64px !important;
+  }
+}

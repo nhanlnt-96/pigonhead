@@ -67,8 +67,7 @@ const HeaderComp = (props) => {
               >
                 {headerMenu.map((val, index) => (
                   <MenuItem key={index} onClick={handleCloseNavMenu}>
-                    <Link sx={{textDecoration: "none"}} href={val.path}
-                          className="header-comp-menu-item">{val.label}</Link>
+                    <Link sx={{textDecoration: "none", color: "#000"}} href={val.path}>{val.label}</Link>
                   </MenuItem>
                 ))}
               </Menu>
