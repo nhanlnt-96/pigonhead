@@ -4,6 +4,7 @@
 .team-comp {
   background-color: $odd-page-color;
   position: relative;
+  min-height: unset !important;
 
   &-container {
     padding-bottom: 24px;
@@ -33,7 +34,7 @@
     height: 160px;
 
     img {
-      border-radius: 100%;
+      //border-radius: 100%;
       width: 220px;
       height: 220px;
       position: absolute;

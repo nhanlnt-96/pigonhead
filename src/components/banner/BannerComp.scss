@@ -2,7 +2,7 @@
 @import "../../styles/rwd";
 
 .banner-comp {
-  background-color: $bg-color;
+  background-color: $primary-color;
 
   &-container {
     padding-top: 24px;
@@ -39,7 +39,7 @@
       min-height: 350px;
 
       .Typewriter__wrapper, .Typewriter__cursor {
-        font-size: 50px;
+        font-size: 45px;
         @include mobile {
           font-size: 30px;
         }
@@ -58,68 +58,13 @@
       }
     }
 
-    .button-footer {
-      margin-top: 24px;
+    .img-container {
       @include flex-center;
 
-      .button-item {
-        border-radius: 50px;
-        position: relative;
-        cursor: pointer;
-        width: 200px;
-        padding: 15px;
-        @include flex-center;
-        background-color: rgba(134, 139, 141, 1);
-        transition: .5s;
-        overflow: hidden;
-
-        &:hover {
-          background-color: $fifth-color;
-          box-shadow: 0 0 10px $fifth-color, 0 0 20px $fifth-color, 0 0 30px $fifth-color, 0 0 40px $fifth-color;
-        }
-
-        &::before {
-          content: '';
-          position: absolute;
-          height: 400%;
-          background-color: $fifth-color;
-          transition: .5s;
-          animation: buttonAnimate 2s linear infinite;
-          width: 40px;
-          animation-delay: .33s;
-          @include mobile {
-            display: none;
-          }
-        }
-
-        &:hover::before {
-          width: 120%;
-        }
-
-        &::after {
-          content: '';
-          position: absolute;
-          background-color: #0e1538;
-          inset: 4px;
-          border-radius: 50px;
-        }
-
-        &:hover::after {
-          background-color: $fifth-color;
-        }
-
-        .btn-name {
-          position: relative;
-          z-index: 1;
-          color: #ffffff;
-          font-size: 25px;
-          font-weight: 600;
-          transition: .5s;
-          letter-spacing: 5px;
-        }
-
-        &:hover .btn-name {
-          opacity: 1;
+      img {
+        width: 60%;
+        @include mobile {
+          width: 100%;
         }
       }
     }
@@ -232,10 +177,69 @@
       margin-top: 24px;
       @include flex-center;
 
-      img {
-        width: 60%;
-        @include mobile {
-          width: 100%;
+      .button-footer {
+        margin-top: 24px;
+        @include flex-center;
+
+        .button-item {
+          border-radius: 50px;
+          position: relative;
+          cursor: pointer;
+          width: 200px;
+          padding: 15px;
+          @include flex-center;
+          background-color: rgba(134, 139, 141, 1);
+          transition: .5s;
+          overflow: hidden;
+
+          &:hover {
+            background-color: $fifth-color;
+            box-shadow: 0 0 10px $fifth-color, 0 0 20px $fifth-color, 0 0 30px $fifth-color, 0 0 40px $fifth-color;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            height: 400%;
+            background-color: $fifth-color;
+            transition: .5s;
+            animation: buttonAnimate 2s linear infinite;
+            width: 40px;
+            animation-delay: .33s;
+            @include mobile {
+              display: none;
+            }
+          }
+
+          &:hover::before {
+            width: 120%;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            background-color: #0e1538;
+            inset: 4px;
+            border-radius: 50px;
+          }
+
+          &:hover::after {
+            background-color: $fifth-color;
+          }
+
+          .btn-name {
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+            font-size: 25px;
+            font-weight: 600;
+            transition: .5s;
+            letter-spacing: 5px;
+          }
+
+          &:hover .btn-name {
+            opacity: 1;
+          }
         }
       }
     }

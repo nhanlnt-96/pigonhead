@@ -32,9 +32,9 @@ const AboutComp = () => {
           </Grid>
         </Grid>
       </Container>
-      <div className="footer-img">
-        <img src={AboutCompBg} alt="pigeonhead" className="footer-img-item"/>
-      </div>
+      {/*<div className="footer-img">*/}
+      {/*  <img src={AboutCompBg} alt="pigeonhead" className="footer-img-item"/>*/}
+      {/*</div>*/}
     </Container>
   );
 };

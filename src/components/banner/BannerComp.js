@@ -3,7 +3,7 @@ import {Alert, Box, Container, Grid, Snackbar} from "@mui/material";
 import HeaderComp from "../header/HeaderComp";
 import TypewriterComponent from "typewriter-effect";
 import {CountDownComp} from "./components/CountDownComp";
-import BannerImg from "../../assets/imgs/pigeonheadeSound.png";
+import BannerImg from "../../assets/gifs/pigeonheadeSound.gif";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchData} from "../../redux/data/dataActions";
 import * as s from "../../styles/globalStyles";
@@ -131,20 +131,31 @@ const BannerComp = () => {
         <Grid container spacing={5} className="banner-comp-content">
           <Grid item xs={12} lg={6} md={6} className="banner-comp-content-left">
             <Box data-aos="zoom-in" className="left-top-container">
+              <div className="img-container">
+                <img data-aos="zoom-in" src={BannerImg} alt="pigeonheade"/>
+              </div>
               <div className="title-container">
                 <div className="title">
                   <TypewriterComponent
                     onInit={(typewriter) => {
-                      typewriter.typeString("Welcome to the Pigeonhead.").start().callFunction(() => {
+                      typewriter.typeString("Welcome to the Pigeonhead flock.").start().callFunction(() => {
                         setShowLeftTopContent(true);
                       });
                     }}
                   />
                 </div>
-                <p style={{display: !showLeftTopContent && "none"}} className="content">Our goal is to create the Most stylish NFT Collection possible that will make you stand out in the Metaverse</p>
+                <p style={{display: !showLeftTopContent && "none"}} className="content">Our goal is to create the Most
+                  stylish NFT Collection possible that will make you stand out in the Metaverse</p>
               </div>
+            </Box>
+          </Grid>
+          <Grid item xs={12} lg={6} md={6} className="banner-comp-content-right">
+            <Box data-aos="zoom-in" className="countdown-section">
+              <CountDownComp/>
+            </Box>
+            <Box className="content-right-bottom">
               {
-                !blockchain.account && (
+                !blockchain.account ? (
                   <div className="button-footer">
                     <a data-aos="zoom-in" className="button-item" onClick={(e) => {
                       e.preventDefault();
@@ -154,18 +165,6 @@ const BannerComp = () => {
                       <span className="btn-name">Mint Now</span>
                     </a>
                   </div>
-                )
-              }
-            </Box>
-          </Grid>
-          <Grid item xs={12} lg={6} md={6} className="banner-comp-content-right">
-            <Box data-aos="zoom-in" className="countdown-section" style={{order: blockchain.account ? 1 : 2}}>
-              <CountDownComp/>
-            </Box>
-            <Box className="content-right-bottom" style={{order: blockchain.account ? 2 : 1}}>
-              {
-                !blockchain.account ? (
-                  <img data-aos="zoom-in" src={BannerImg} alt="pigeonheade"/>
                 ) : (
                   <ResponsiveWrapper data-aos="zoom-in" flex={1} test>
                     <s.Container

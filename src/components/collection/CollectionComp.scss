@@ -4,6 +4,7 @@
 .collection-comp {
   background-color: $odd-page-color;
   position: relative;
+  min-height: unset !important;
 
   &-container {
     @include mobile {
