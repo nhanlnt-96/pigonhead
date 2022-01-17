@@ -13,7 +13,7 @@
   }
 }
 
-.faq-comp-container .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+.faq-comp-container .css-1elwnq4-MuiPaper-root-MuiAccordion-root,.css-67l5gl {
   background-color: transparent;
   box-shadow: unset;
   border-top: 1px solid #ffffff;
@@ -41,13 +41,13 @@
   }
 }
 
-.css-yw020d-MuiAccordionSummary-expandIconWrapper {
+.css-yw020d-MuiAccordionSummary-expandIconWrapper, .css-1fx8m19 {
   transform: unset !important;
   -webkit-transition: unset !important;
   transition: unset !important;
 }
 
-.Mui-expanded {
+.Mui-expanded, .css-67l5gl.Mui-expanded{
   .accordion-toggle-line:nth-child(2) {
     transform: rotate(180deg);
   }
