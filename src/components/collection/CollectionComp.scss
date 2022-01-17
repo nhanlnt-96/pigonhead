@@ -31,3 +31,7 @@
     grid-gap: 12px;
   }
 }
+
+.collection-comp-container .custom-slide .slick-list {
+  transform: scaleX(-1);
+}
