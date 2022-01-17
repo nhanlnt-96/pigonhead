@@ -29,11 +29,11 @@
 
   .team-item .team-ava {
     position: relative;
-    background-color: $primary-color;
+    background-color: $bg-color;
     height: 160px;
 
     img {
-      border-radius: 100%;
+      //border-radius: 100%;
       width: 220px;
       height: 220px;
       position: absolute;
