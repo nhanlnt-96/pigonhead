@@ -1,0 +1,78 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.team-comp {
+  background-color: $odd-page-color;
+  position: relative;
+
+  &-container {
+    padding-bottom: 24px;
+    @include mobile {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+.team-comp-container .team-comp-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  .team-item {
+    border-radius: 20px;
+    box-shadow: #000000 0 5px 5px;
+    overflow: hidden;
+    height: 400px;
+    background-color: $third-color;
+  }
+
+  .team-item .team-ava {
+    position: relative;
+    background-color: $primary-color;
+    height: 160px;
+
+    img {
+      border-radius: 100%;
+      width: 220px;
+      height: 220px;
+      position: absolute;
+      bottom: -110px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
+  .team-item .team-info {
+    padding-top: 110px;
+    @include flex-center;
+    flex-direction: column;
+
+    .team-name, .team-position {
+      text-align: center;
+    }
+
+    .team-name {
+      margin-top: 24px;
+
+      p {
+        font-size: 30px;
+        font-weight: 600;
+      }
+    }
+
+    .team-info {
+      margin-top: 12px;
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 24px;
+  }
+}

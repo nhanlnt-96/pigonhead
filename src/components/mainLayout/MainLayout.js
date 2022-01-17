@@ -8,6 +8,7 @@ import AboutComp from "../about/AboutComp";
 import RoadmapComp from "../roadmap/RoadmapComp";
 import CollectionComp from "../collection/CollectionComp";
 import FAQComp from "../faq/FAQComp";
+import TeamComp from "../team/TeamComp";
 
 ScrollToTop.propTypes = {
   children: PropTypes.element.isRequired,
@@ -28,6 +29,9 @@ const MainLayout = (props) => {
       </div>
       <div id="roadmap">
         <RoadmapComp/>
+      </div>
+      <div id="team">
+        <TeamComp/>
       </div>
       <div id="faq">
         <FAQComp/>

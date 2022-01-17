@@ -2,7 +2,7 @@
 @import "../../styles/rwd";
 
 .faq-comp {
-  background-color: $odd-page-color;
+  background-color: $even-page-color;
 
   &-container {
     padding-bottom: 24px;
@@ -41,14 +41,14 @@
   }
 }
 
-.accordion-toggle-active {
-  .accordion-toggle-line:nth-child(2) {
-    transform: rotate(180deg);
-  }
-}
-
 .css-yw020d-MuiAccordionSummary-expandIconWrapper {
   transform: unset !important;
   -webkit-transition: unset !important;
   transition: unset !important;
+}
+
+.Mui-expanded {
+  .accordion-toggle-line:nth-child(2) {
+    transform: rotate(180deg);
+  }
 }
