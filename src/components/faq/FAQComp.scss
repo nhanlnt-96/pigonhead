@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.faq-comp {
+  background-color: $odd-page-color;
+
+  &-container {
+    padding-bottom: 24px;
+    @include mobile {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+}
+
+.faq-comp-container .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  background-color: transparent;
+  box-shadow: unset;
+  border-top: 1px solid #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.faq-comp-container .accordion-toggle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  @include flex-center;
+
+  &-line {
+    width: 20px;
+    height: 4px;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #000000;
+    transition: .5s;
+
+    &:nth-child(2) {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.accordion-toggle-active {
+  .accordion-toggle-line:nth-child(2) {
+    transform: rotate(180deg);
+  }
+}
+
+.css-yw020d-MuiAccordionSummary-expandIconWrapper {
+  transform: unset !important;
+  -webkit-transition: unset !important;
+  transition: unset !important;
+}

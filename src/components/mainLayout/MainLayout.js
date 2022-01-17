@@ -7,6 +7,7 @@ import BannerComp from "../banner/BannerComp";
 import AboutComp from "../about/AboutComp";
 import RoadmapComp from "../roadmap/RoadmapComp";
 import CollectionComp from "../collection/CollectionComp";
+import FAQComp from "../faq/FAQComp";
 
 ScrollToTop.propTypes = {
   children: PropTypes.element.isRequired,
@@ -27,6 +28,9 @@ const MainLayout = (props) => {
       </div>
       <div id="roadmap">
         <RoadmapComp/>
+      </div>
+      <div id="faq">
+        <FAQComp/>
       </div>
       <ScrollToTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
