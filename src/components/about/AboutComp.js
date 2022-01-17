@@ -1,6 +1,6 @@
 import React from "react";
 import {Container, Grid} from "@mui/material";
-import AboutCompImg from "../../assets/imgs/Img2.jpg";
+import AboutCompImg from "../../assets/imgs/pigeonheadeSkateboard.png";
 import AboutCompBg from "../../assets/imgs/evenFooterImg.png";
 
 import "./AboutComp.scss";

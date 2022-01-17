@@ -41,9 +41,8 @@
         font-size: 50px;
         color: #000000;
         font-weight: 700;
-        text-align: right;
+        text-align: center;
         @include mobile {
-          text-align: center;
           font-size: 30px;
         }
       }
