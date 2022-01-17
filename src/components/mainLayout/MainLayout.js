@@ -5,6 +5,7 @@ import {BiUpArrow} from "react-icons/all";
 import PropTypes from "prop-types";
 import BannerComp from "../banner/BannerComp";
 import AboutComp from "../about/AboutComp";
+import RoadmapComp from "../roadmap/RoadmapComp";
 
 ScrollToTop.propTypes = {
   children: PropTypes.element.isRequired,
@@ -19,6 +20,9 @@ const MainLayout = (props) => {
       </div>
       <div id="about">
         <AboutComp/>
+      </div>
+      <div id="roadmap">
+        <RoadmapComp/>
       </div>
       <ScrollToTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
