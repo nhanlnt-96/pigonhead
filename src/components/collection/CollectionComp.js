@@ -21,7 +21,15 @@ const CollectionComp = () => {
         {/*    ))*/}
         {/*  }*/}
         {/*</div>*/}
-        <SlideShowComp slideImages={collectionData}/>
+        <div>
+          <SlideShowComp slideImages={collectionData}/>
+        </div>
+        <div style={{margin: "10px 0"}} className="custom-slide">
+          <SlideShowComp slideImages={collectionData}/>
+        </div>
+        <div>
+          <SlideShowComp slideImages={collectionData}/>
+        </div>
       </Container>
       {/*<div className="footer-img">*/}
       {/*  <img src={CollectionFooterImg} alt="pigeonhead" className="footer-img-item"/>*/}
