@@ -1,7 +1,7 @@
 import React from "react";
 import {Container, Grid} from "@mui/material";
-import WelcomeCompImg from "../../assets/imgs/Img2.jpg";
-import WelcomeCompBg from "../../assets/imgs/aboutBg.png";
+import AboutCompImg from "../../assets/imgs/Img2.jpg";
+import AboutCompBg from "../../assets/imgs/aboutBg.png";
 
 import "./AboutComp.scss";
 
@@ -11,7 +11,7 @@ const AboutComp = () => {
       <Container className="about-comp-container">
         <Grid container className="about-comp-content" spacing={5}>
           <Grid lg={4} md={4} sm={12} className="about-comp-left" item>
-            <img data-aos="zoom-in" src={WelcomeCompImg} alt="pigeonhead"/>
+            <img data-aos="zoom-in" src={AboutCompImg} alt="pigeonhead"/>
           </Grid>
           <Grid lg={8} md={8} sm={12} className="about-comp-right" item>
             <div data-aos="fade-down" className="title-container">
@@ -33,7 +33,7 @@ const AboutComp = () => {
         </Grid>
       </Container>
       <div className="footer-img">
-        <img src={WelcomeCompBg} alt="pigeonhead" className="footer-img-item"/>
+        <img src={AboutCompBg} alt="pigeonhead" className="footer-img-item"/>
       </div>
     </Container>
   );
