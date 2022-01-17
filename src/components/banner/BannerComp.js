@@ -3,7 +3,7 @@ import {Alert, Box, Container, Grid, Snackbar} from "@mui/material";
 import HeaderComp from "../header/HeaderComp";
 import TypewriterComponent from "typewriter-effect";
 import {CountDownComp} from "./components/CountDownComp";
-import BannerImg from "../../assets/imgs/Img1.jpeg";
+import BannerImg from "../../assets/imgs/pigeonheadeSound.png";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchData} from "../../redux/data/dataActions";
 import * as s from "../../styles/globalStyles";
@@ -141,10 +141,7 @@ const BannerComp = () => {
                     }}
                   />
                 </div>
-                <p style={{display: !showLeftTopContent && "none"}} className="content">Lorem ipsum
-                  dolor sit amet,
-                  consectetur adipisicing elit. Consequuntur, quos,
-                  totam?</p>
+                <p style={{display: !showLeftTopContent && "none"}} className="content">Our goal is to create the Most stylish NFT Collection possible that will make you stand out in the Metaverse</p>
               </div>
               {
                 !blockchain.account && (
@@ -154,7 +151,7 @@ const BannerComp = () => {
                       dispatch(connect());
                       getData();
                     }}>
-                      <span className="btn-name">join us</span>
+                      <span className="btn-name">Mint Now</span>
                     </a>
                   </div>
                 )
@@ -162,10 +159,10 @@ const BannerComp = () => {
             </Box>
           </Grid>
           <Grid item xs={12} lg={6} md={6} className="banner-comp-content-right">
-            <Box data-aos="zoom-in" className="countdown-section">
+            <Box data-aos="zoom-in" className="countdown-section" style={{order: blockchain.account ? 1 : 2}}>
               <CountDownComp/>
             </Box>
-            <Box className="content-right-bottom">
+            <Box className="content-right-bottom" style={{order: blockchain.account ? 2 : 1}}>
               {
                 !blockchain.account ? (
                   <img data-aos="zoom-in" src={BannerImg} alt="pigeonheade"/>
