@@ -8,7 +8,7 @@ import "./TeamComp.scss";
 
 const TeamComp = () => {
   return (
-    <Container className="team-comp comp-after-footer-img" maxWidth>
+    <Container className="team-comp comp-height" maxWidth>
       <Container className="team-comp-container">
         <TitleComp title={"TEAM"}/>
         <div className="team-comp-content">
@@ -31,9 +31,9 @@ const TeamComp = () => {
           }
         </div>
       </Container>
-      <div className="footer-img">
-        <img src={TeamCompImg} alt="pigeonhead" className="footer-img-item"/>
-      </div>
+      {/*<div className="footer-img">*/}
+      {/*  <img src={TeamCompImg} alt="pigeonhead" className="footer-img-item"/>*/}
+      {/*</div>*/}
     </Container>
   );
 };

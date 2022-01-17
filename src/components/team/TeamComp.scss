@@ -4,6 +4,7 @@
 .team-comp {
   background-color: $odd-page-color;
   position: relative;
+  min-height: unset !important;
 
   &-container {
     padding-bottom: 24px;
@@ -29,7 +30,7 @@
 
   .team-item .team-ava {
     position: relative;
-    background-color: $bg-color;
+    background-color: $primary-color;
     height: 160px;
 
     img {

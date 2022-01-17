@@ -12,7 +12,7 @@ import {faqData} from "../../configs/faqData";
 
 const FAQComp = () => {
   return (
-    <Container className="faq-comp comp-after-footer-img" maxWidth>
+    <Container className="faq-comp comp-height" maxWidth>
       <Container className="faq-comp-container">
         <TitleComp title={"FAQ"}/>
         {

@@ -11,7 +11,7 @@ import "./RoadmapComp.scss";
 
 const RoadmapComp = () => {
   return (
-    <Container className="roadmap-comp comp-after-footer-img" maxWidth>
+    <Container className="roadmap-comp comp-height" maxWidth>
       <Container className="roadmap-comp-container">
         <TitleComp title={"ROADMAP"}/>
         <VerticalTimeline className="roadmap-comp-content">
@@ -41,9 +41,9 @@ const RoadmapComp = () => {
           />
         </VerticalTimeline>
       </Container>
-      <div className="footer-img">
-        <img src={RoadmapFooterImg} alt="pigeonhead" className="footer-img-item"/>
-      </div>
+      {/*<div className="footer-img">*/}
+      {/*  <img src={RoadmapFooterImg} alt="pigeonhead" className="footer-img-item"/>*/}
+      {/*</div>*/}
     </Container>
   );
 };
