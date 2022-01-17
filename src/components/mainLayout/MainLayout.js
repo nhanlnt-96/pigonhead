@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import BannerComp from "../banner/BannerComp";
 import AboutComp from "../about/AboutComp";
 import RoadmapComp from "../roadmap/RoadmapComp";
+import CollectionComp from "../collection/CollectionComp";
 
 ScrollToTop.propTypes = {
   children: PropTypes.element.isRequired,
@@ -20,6 +21,9 @@ const MainLayout = (props) => {
       </div>
       <div id="about">
         <AboutComp/>
+      </div>
+      <div id="collection">
+        <CollectionComp/>
       </div>
       <div id="roadmap">
         <RoadmapComp/>

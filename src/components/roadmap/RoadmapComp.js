@@ -1,6 +1,6 @@
 import React from "react";
 import {Container} from "@mui/material";
-import RoadmapFooterImg from "../../assets/imgs/collectionBg.png";
+import RoadmapFooterImg from "../../assets/imgs/evenFooterImg.png";
 import {roadmapData} from "../../configs/roadmapData";
 import TitleComp from "../title/TitleComp";
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
