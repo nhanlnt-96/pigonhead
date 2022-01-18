@@ -5,6 +5,7 @@ import {teamData} from "../../configs/teamData";
 import TitleComp from "../title/TitleComp";
 
 import "./TeamComp.scss";
+import {SiDiscord, SiInstagram, SiTwitter} from "react-icons/all";
 
 const TeamComp = () => {
   return (
@@ -29,6 +30,17 @@ const TeamComp = () => {
               </div>
             ))
           }
+        </div>
+        <div className="social-container">
+          <a href="https://instagram.com/pigeonheadsnft" className="social-item" target="_blank">
+            <SiInstagram/>
+          </a>
+          <a href="https://twitter.com/pigeonheadsnft" className="social-item" target="_blank">
+            <SiTwitter/>
+          </a>
+          <a href="https://discord.gg/RvPaQ7Fs" className="social-item" target="_blank">
+            <SiDiscord/>
+          </a>
         </div>
       </Container>
       {/*<div className="footer-img">*/}

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {Alert, Box, Container, Grid, Snackbar} from "@mui/material";
 import HeaderComp from "../header/HeaderComp";
-import TypewriterComponent from "typewriter-effect";
+// import TypewriterComponent from "typewriter-effect";
 import {CountDownComp} from "./components/CountDownComp";
-import BannerImg from "../../assets/gifs/pigeonheadeSound.gif";
+import BannerImg from "../../assets/imgs/bannerImg.png";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchData} from "../../redux/data/dataActions";
 import * as s from "../../styles/globalStyles";
@@ -129,27 +129,30 @@ const BannerComp = () => {
           <Alert severity="error">{blockchain.errorMsg}</Alert>
         </Snackbar>
         <Grid container spacing={5} className="banner-comp-content">
-          <Grid item xs={12} lg={6} md={6} className="banner-comp-content-left">
-            <Box data-aos="zoom-in" className="left-top-container">
-              <div className="img-container">
-                <img data-aos="zoom-in" src={BannerImg} alt="pigeonheade"/>
-              </div>
-              <div className="title-container">
-                <div className="title">
-                  <TypewriterComponent
-                    onInit={(typewriter) => {
-                      typewriter.typeString("Welcome to the Pigeonhead flock.").start().callFunction(() => {
-                        setShowLeftTopContent(true);
-                      });
-                    }}
-                  />
-                </div>
-                <p style={{display: !showLeftTopContent && "none"}} className="content">Our goal is to create the Most
-                  stylish NFT Collection possible that will make you stand out in the Metaverse</p>
-              </div>
+          {/*<Grid item xs={12} lg={6} md={6} className="banner-comp-content-left">*/}
+          {/*  <Box data-aos="zoom-in" className="left-top-container">*/}
+          {/*    <div className="img-container">*/}
+          {/*      <img data-aos="zoom-in" src={BannerImg} alt="pigeonheade"/>*/}
+          {/*    </div>*/}
+          {/*    <div className="title-container">*/}
+          {/*      <div className="title">*/}
+          {/*        <TypewriterComponent*/}
+          {/*          onInit={(typewriter) => {*/}
+          {/*            typewriter.typeString("Welcome to the Pigeonhead flock.").start().callFunction(() => {*/}
+          {/*              setShowLeftTopContent(true);*/}
+          {/*            });*/}
+          {/*          }}*/}
+          {/*        />*/}
+          {/*      </div>*/}
+          {/*      <p style={{display: !showLeftTopContent && "none"}} className="content">Our goal is to create the Most*/}
+          {/*        stylish NFT Collection possible that will make you stand out in the Metaverse</p>*/}
+          {/*    </div>*/}
+          {/*  </Box>*/}
+          {/*</Grid>*/}
+          <Grid item className="banner-comp-content-right">
+            <Box className="img-header">
+              <img src={BannerImg} alt="pigeonheader"/>
             </Box>
-          </Grid>
-          <Grid item xs={12} lg={6} md={6} className="banner-comp-content-right">
             <Box data-aos="zoom-in" className="countdown-section">
               <CountDownComp/>
             </Box>
