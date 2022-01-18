@@ -73,8 +73,17 @@
   &-right {
     flex-direction: column;
 
+    .img-header {
+      @include flex-center;
+
+      img {
+        width: 100%;
+      }
+    }
+
     .countdown-section {
       min-height: 200px;
+      margin-top: 24px;
       @include smallScreen {
         min-height: 200px !important;
       }

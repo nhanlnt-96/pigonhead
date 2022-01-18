@@ -1,6 +1,9 @@
 @import "../../styles/variables";
 @import "../../styles/rwd";
 
+$roadmapIcon: ("1": "../../assets/icons/roadmapIcon1.png", "2": "../../assets/icons/roadmapIcon2.png", "3": "../../assets/icons/roadmapIcon3.png", "4": "../../assets/icons/roadmapIcon4.png");
+
+
 .roadmap-comp {
   background-color: $even-page-color;
   position: relative;
@@ -18,9 +21,17 @@
 }
 
 .roadmap-comp-container .roadmap-comp-content {
-  .vertical-timeline-element-icon {
-    background: url("../../assets/icons/nft.png") no-repeat center;
-    background-size: cover;
+  .vertical-timeline-element--work {
+    @each $child, $url in $roadmapIcon {
+      &:nth-child(#{$child}) {
+        .vertical-timeline-element-icon {
+          background-image: url($url);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
   }
 
   .vertical-timeline-element-title {
