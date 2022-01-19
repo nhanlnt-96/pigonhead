@@ -15,10 +15,10 @@ const AboutComp = () => {
           </Grid>
           <Grid lg={8} md={8} sm={12} className="about-comp-right" item>
             <div data-aos="fade-down" className="title-container">
-              <h2 className="title">Welcome to the Pigeonhead flock</h2>
+              <h2 className="title">Welcome to the Pigeonhead Flock</h2>
             </div>
             <div className="content-container">
-              <p data-aos="fade-left" className="content">The flock consists of 10,000 unique Pigeonheads cooing their
+              <p data-aos="fade-left" className="content">The flock consists of 9,900 unique Pigeonheads cooing their
                 way into the Ethereum
                 blockchain. Emerging from the streets of New York City, Pigeonheads will grant you exclusive access to
                 our online community and make you eligible for some exciting rewards along the way. Our goal is to
