@@ -5,9 +5,7 @@ export const roadmapData = [
   },
   {
     percent: "25% Pre-Launch Giveaways",
-    content: ["Keep up with the flock in the Discord channel and the Pigeonheads with the most engagement will be" +
-    " eligible to receive 2 Ethereum rewards.", "5 new item will also drop to 5 lucky token holders to accessorize their look.","We will announce at least 20 giveaways.we will pick random participants from our\n" +
-    "Discord and Twitter and reward them with their own Pigeonhead on the Launch day. anyone can win."]
+    content: ["Keep up with the flock in the Discord channel and the Pigeonheads with the most engagement will be eligible to receive 2 Ethereum rewards.", "5 new item will also drop to 5 lucky token holders to accessorize their look.","We will announce at least 20 giveaways, with winners selected from participants in our Discord and Twitter channels. The winners will be rewarded with their own Pigeonhead NFT on the Launch day."]
   },
   {
     percent: "50% Lets show some appreciation",
@@ -21,9 +19,8 @@ export const roadmapData = [
   },
   {
     percent: "100% We’ve arrived!",
-    content: ["Pigeonhead Collection launches with limited drops each week.", "- We will be releasing new items" +
-    " weekly to add to your Pigeonhead closet for you to flex or resell it on Opensea.","- Our giveaways intensify with the first cold wallet drop in New York City, including one-\n" +
-    "of-a-kind items, up to 5 Ethereum and much more.","- Geodrops are unlocked, Murals with embedded AR will be unveiled in New York, LA\n" +
+    content: ["Geodrops are unlocked. Murals with embedded AR will be unveiled in New York, LA and Miami, which will be auctioned as NFTs.", "- We will be releasing new items" +
+    " weekly to add to your Pigeonhead closet for you to flex or resell it on Opensea.","- Our giveaways intensify with the first cold wallet drop in New York City, including one-of-a-kind items, up to 5 Ethereum and much more.","- Geodrops are unlocked, Murals with embedded AR will be unveiled in New York, LA\n" +
     "and Miami. Murals will be auctioned as NFTs.","- Join us on Discord, Twitter and Instagram!"]
   }
 ];
