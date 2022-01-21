@@ -35,15 +35,11 @@ const RoadmapComp = () => {
             contentArrowStyle={{ borderRight: "7px solid #45aaf2" }}
             iconStyle={{ backgroundColor: "#45aaf2", color: "#fff" }}
           >
-            <h3 className="vertical-timeline-element-title">25% Pre-Launch</h3>
+            <h3 className="vertical-timeline-element-title">25% Pre-Launch Giveaways.</h3>
             {/*<h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>*/}
-            <p>- Giveaways.</p>
-            <p>- Keep up with the flock in the Discord channel and the Pigeonheads with the most
-              engagement will be eligible to receive 2 Ethereum rewards.</p>
+            <p>- Keep up with the flock in the Discord channel and the Pigeonheads with the most engagement will be eligible to receive 2 Ethereum rewards.</p>
             <p>- 5 new item will also drop to 5 lucky token holders to accessorize their look.</p>
-            <p>- We will announce at least 20 giveaways.we will pick random participants from our
-              Discord and Twitter and reward them with their own Pigeonhead on the Launch day.
-              anyone can win.</p>
+            <p>- We will announce at least 20 giveaways, with winners selected from participants in our Discord and Twitter channels. The winners will be rewarded with their own Pigeonhead NFT on the Launch day.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -85,9 +81,8 @@ for holders that own 5 pigeons or more.</p>
             <p>Pigeonhead Collection launches with limited drops each week.</p>
             <p>- We will be releasing new items weekly to add to your Pigeonhead closet for you to
 flex or resell it on Opensea.</p>
-            <p>- Our giveaways intensify with the first cold wallet drop in New York City, including oneof-a-kind items, up to 5 Ethereum and much more.</p>
-            <p>- Geodrops are unlocked, Murals with embedded AR will be unveiled in New York, LA
-and Miami. Murals will be auctioned as NFTs.</p>
+            <p>- Our giveaways intensify with the first cold wallet drop in New York City, including one-of-a-kind items, up to 5 Ethereum and much more.</p>
+            <p>- Geodrops are unlocked. Murals with embedded AR will be unveiled in New York, LA and Miami, which will be auctioned as NFTs.</p>
             <p>- Join us on Discord, Twitter and Instagram!</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
