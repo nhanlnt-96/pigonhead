@@ -35,7 +35,7 @@ const RoadmapComp = () => {
             contentArrowStyle={{ borderRight: "7px solid #45aaf2" }}
             iconStyle={{ backgroundColor: "#45aaf2", color: "#fff" }}
           >
-            <h3 className="vertical-timeline-element-title">25% Pre-Launch Giveaways.</h3>
+            <h3 className="vertical-timeline-element-title">25% Pre-Launch Giveaways</h3>
             {/*<h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>*/}
             <p>- Keep up with the flock in the Discord channel and the Pigeonheads with the most engagement will be eligible to receive 2 Ethereum rewards.</p>
             <p>- 5 new item will also drop to 5 lucky token holders to accessorize their look.</p>

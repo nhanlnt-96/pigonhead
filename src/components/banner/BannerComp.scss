@@ -82,17 +82,24 @@
     }
 
     .countdown-section {
-      min-height: 200px;
+      //min-height: 200px;
       margin-top: 24px;
-      @include smallScreen {
-        min-height: 200px !important;
-      }
-      @include mobile {
-        min-height: 220px;
-      }
+      //@include smallScreen {
+      //  min-height: 200px !important;
+      //}
+      //@include mobile {
+      //  min-height: 220px;
+      //}
     }
 
     .countdown-section .countdown-container {
+      .coming-soon .text {
+        color: #ffffff;
+        font-size: 25px;
+        text-align: center;
+        font-weight: bold;
+      }
+
       .countdown-title {
         color: #000000;
         font-size: 35px;
@@ -183,7 +190,7 @@
     }
 
     .content-right-bottom {
-      margin-top: 24px;
+      //margin-top: 24px;
       @include flex-center;
 
       .button-footer {
