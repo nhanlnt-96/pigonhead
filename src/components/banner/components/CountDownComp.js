@@ -37,12 +37,15 @@ export const CountDownComp = () => {
   return (
     <div className="countdown-container">
       <h2 className="countdown-title">Countdown to Presale day</h2>
-      <div className="countdown-detail">
+      <div className="coming-soon">
+        <h6 className="text">COMMING SOON</h6>
+      </div>
+      {/* <div className="countdown-detail">
         <div className="days">{(days <= 0) ? "00" : days < 10 ? `0${days}` : days}</div>
         <div className="hours">{(hours <= 0) ? "00" : hours < 10 ? `0${hours}` : hours}</div>
         <div className="minutes">{(minutes <= 0) ? "00" : minutes < 10 ? `0${minutes}` : minutes}</div>
         <div className="seconds">{(seconds <= 0) ? "00" : seconds < 10 ? `0${seconds}` : seconds}</div>
-      </div>
+      </div> */}
     </div>
   );
 };
