@@ -1,6 +1,5 @@
 import React from "react";
 import {Container} from "@mui/material";
-import TeamCompImg from "../../assets/imgs/oddFooterImg.png";
 import {teamData} from "../../configs/teamData";
 import TitleComp from "../title/TitleComp";
 
@@ -43,9 +42,6 @@ const TeamComp = () => {
           </a>
         </div>
       </Container>
-      {/*<div className="footer-img">*/}
-      {/*  <img src={TeamCompImg} alt="pigeonhead" className="footer-img-item"/>*/}
-      {/*</div>*/}
     </Container>
   );
 };
