@@ -3,7 +3,7 @@ import {Alert, Box, Container, Grid, Snackbar} from "@mui/material";
 import HeaderComp from "../header/HeaderComp";
 // import TypewriterComponent from "typewriter-effect";
 import {CountDownComp} from "./components/CountDownComp";
-import BannerImg from "../../assets/imgs/bannerImg.png";
+import BannerImg from "../../assets/imgs/bannerImg.jpeg";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchData} from "../../redux/data/dataActions";
 import * as s from "../../styles/globalStyles";
