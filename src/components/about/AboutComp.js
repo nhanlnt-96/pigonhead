@@ -1,7 +1,6 @@
 import React from "react";
 import {Container, Grid} from "@mui/material";
 import AboutCompImg from "../../assets/imgs/pigeonheadeSkateboard.png";
-import AboutCompBg from "../../assets/imgs/evenFooterImg.png";
 
 import "./AboutComp.scss";
 
@@ -32,9 +31,6 @@ const AboutComp = () => {
           </Grid>
         </Grid>
       </Container>
-      {/*<div className="footer-img">*/}
-      {/*  <img src={AboutCompBg} alt="pigeonhead" className="footer-img-item"/>*/}
-      {/*</div>*/}
     </Container>
   );
 };
