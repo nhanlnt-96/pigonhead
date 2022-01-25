@@ -129,38 +129,18 @@ const BannerComp = () => {
           <Alert severity="error">{blockchain.errorMsg}</Alert>
         </Snackbar>
         <Grid container spacing={5} className="banner-comp-content">
-          {/*<Grid item xs={12} lg={6} md={6} className="banner-comp-content-left">*/}
-          {/*  <Box data-aos="zoom-in" className="left-top-container">*/}
-          {/*    <div className="img-container">*/}
-          {/*      <img data-aos="zoom-in" src={BannerImg} alt="pigeonheade"/>*/}
-          {/*    </div>*/}
-          {/*    <div className="title-container">*/}
-          {/*      <div className="title">*/}
-          {/*        <TypewriterComponent*/}
-          {/*          onInit={(typewriter) => {*/}
-          {/*            typewriter.typeString("Welcome to the Pigeonhead flock.").start().callFunction(() => {*/}
-          {/*              setShowLeftTopContent(true);*/}
-          {/*            });*/}
-          {/*          }}*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <p style={{display: !showLeftTopContent && "none"}} className="content">Our goal is to create the Most*/}
-          {/*        stylish NFT Collection possible that will make you stand out in the Metaverse</p>*/}
-          {/*    </div>*/}
-          {/*  </Box>*/}
-          {/*</Grid>*/}
           <Grid item className="banner-comp-content-right">
             <Box className="img-header">
               <img src={BannerImg} alt="pigeonheader"/>
             </Box>
-            <Box data-aos="zoom-in" className="countdown-section">
+            <Box className="countdown-section">
               <CountDownComp/>
             </Box>
             <Box className="content-right-bottom">
               {
                 !blockchain.account ? (
                   <div className="button-footer">
-                    <a data-aos="zoom-in" className="button-item" onClick={(e) => {
+                    <a className="button-item" onClick={(e) => {
                       e.preventDefault();
                       dispatch(connect());
                       getData();
@@ -169,7 +149,7 @@ const BannerComp = () => {
                     </a>
                   </div>
                 ) : (
-                  <ResponsiveWrapper data-aos="zoom-in" flex={1} test>
+                  <ResponsiveWrapper flex={1} test>
                     <s.Container
                       flex={2}
                       jc={"center"}

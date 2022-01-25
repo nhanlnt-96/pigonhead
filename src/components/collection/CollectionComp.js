@@ -11,15 +11,15 @@ const CollectionComp = () => {
     <Container className="collection-comp comp-height" maxWidth>
       <Container className="collection-comp-container">
         <TitleComp title={"COLLECTION"}/>
-        <div>
+        <div className="slider-container">
           <SlideShowComp slideImages={collectionData}/>
         </div>
-        <div style={{margin: "10px 0"}} className="custom-slide">
-          <SlideShowComp slideImages={collectionData}/>
-        </div>
-        <div>
-          <SlideShowComp slideImages={collectionData}/>
-        </div>
+        {/*<div style={{margin: "10px 0"}} className="custom-slide">*/}
+        {/*  <SlideShowComp slideImages={collectionData}/>*/}
+        {/*</div>*/}
+        {/*<div>*/}
+        {/*  <SlideShowComp slideImages={collectionData}/>*/}
+        {/*</div>*/}
       </Container>
     </Container>
   );
