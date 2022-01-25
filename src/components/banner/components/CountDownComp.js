@@ -38,7 +38,7 @@ export const CountDownComp = () => {
     <div className="countdown-container">
       <h2 className="countdown-title">Countdown to Presale day</h2>
       <div className="coming-soon">
-        <h6 className="text">COMMING SOON</h6>
+        <h6 className="text">Coming Soon</h6>
       </div>
       {/* <div className="countdown-detail">
         <div className="days">{(days <= 0) ? "00" : days < 10 ? `0${days}` : days}</div>
