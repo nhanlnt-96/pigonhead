@@ -7,7 +7,7 @@ const TitleComp = ({title}) => {
   return (
     <Container className="title-comp" maxWidth>
       <Container className="title-comp-container">
-        <Box data-aos="zoom-in" className="title-box-container">
+        <Box className="title-box-container">
           <h6 className="title">{title}</h6>
         </Box>
       </Container>

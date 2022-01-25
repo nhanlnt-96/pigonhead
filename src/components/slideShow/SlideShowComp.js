@@ -1,9 +1,8 @@
 import React, {useLayoutEffect, useState} from "react";
 import {Container} from "@mui/material";
-import Slider from "react-slick";
+import {Slide} from "react-slideshow-image";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "react-slideshow-image/dist/styles.css";
 import "./SlideShowComp.scss";
 
 const useWindowSize = () => {
@@ -21,26 +20,27 @@ const useWindowSize = () => {
 
 const SlideShowComp = ({slideImages}) => {
   const screenWidth = useWindowSize();
-  const settings = {
-    infinite: true,
-    slidesToShow: screenWidth < 768 ? 3 : 6,
+  const properties = {
+    duration: 100,
+    slidesToShow: screenWidth < 768 ? 1 : 4,
+    slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 200,
-    cssEase: "linear",
-    pauseOnHover: false
+    indicators: false,
+    pauseOnHover: false,
   };
   return (
     <Container className="slideshow-comp" maxWidth>
-      <Slider {...settings}>
+      <Slide {...properties}>
         {
           slideImages.map((val, index) => (
-            <div key={index} className="img-container">
-              <img src={val} alt="pigeonheade" style={{width: "100%"}}/>
+            <div key={index} className="each-slide">
+              <div className="item">
+                <img src={val} alt="slide-show"/>
+              </div>
             </div>
           ))
         }
-      </Slider>
+      </Slide>
     </Container>
   );
 };

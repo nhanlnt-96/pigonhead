@@ -12,6 +12,12 @@
       padding-right: 0 !important;
     }
   }
+
+  .title-box-container .title {
+    @include mobile {
+      font-size: 40px;
+    }
+  }
 }
 
 .collection-comp-container .collection-comp-content {
@@ -32,6 +38,26 @@
   }
 }
 
-.collection-comp-container .custom-slide .slick-list {
-  transform: scaleX(-1);
+.slideshow-comp {
+  width: 100%;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.each-slide > .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
 }
