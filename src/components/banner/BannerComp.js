@@ -7,9 +7,10 @@ import {fetchData} from "../../redux/data/dataActions";
 import * as s from "../../styles/globalStyles";
 import {connect} from "../../redux/blockchain/blockchainActions";
 import {ResponsiveWrapper, StyledButton, StyledLink, StyledRoundButton, truncate} from "./styleComponent";
+import {Col, Container, Row} from "react-bootstrap";
+import {notification} from "antd";
 
 import "./BannerComp.scss";
-import {Col, Container, Row} from "react-bootstrap";
 
 const BannerComp = () => {
   const dispatch = useDispatch();
@@ -113,6 +114,13 @@ const BannerComp = () => {
     <Container className="banner-comp comp-height" fluid>
       <HeaderComp/>
       <Container className="banner-comp-container">
+        {
+          blockchain.errorMsg && notification.info({
+            message: `Error`,
+            description: blockchain.errorMsg,
+            placement: "bottomRight",
+          })
+        }
         <Row container spacing={5} className="banner-comp-content">
           <Col className="banner-comp-content-right">
             <div className="img-header">
