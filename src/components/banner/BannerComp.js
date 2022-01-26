@@ -7,8 +7,7 @@ import {fetchData} from "../../redux/data/dataActions";
 import * as s from "../../styles/globalStyles";
 import {connect} from "../../redux/blockchain/blockchainActions";
 import {ResponsiveWrapper, StyledButton, StyledLink, StyledRoundButton, truncate} from "./styleComponent";
-import {Col, Container, Row} from "react-bootstrap";
-import {notification} from "antd";
+import {Col, Container, Row, Toast, ToastContainer} from "react-bootstrap";
 
 import "./BannerComp.scss";
 
@@ -19,6 +18,7 @@ const BannerComp = () => {
   const [claimingNft, setClaimingNft] = useState(false);
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
+  const [show, setShow] = useState(false);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
@@ -110,17 +110,13 @@ const BannerComp = () => {
   useEffect(() => {
     getData();
   }, [blockchain.account]);
+  useEffect(() => {
+    if (blockchain?.errorMsg) setShow(true);
+  });
   return (
     <Container className="banner-comp comp-height" fluid>
       <HeaderComp/>
       <Container className="banner-comp-container">
-        {
-          blockchain.errorMsg && notification.info({
-            message: `Error`,
-            description: blockchain.errorMsg,
-            placement: "bottomRight",
-          })
-        }
         <Row container spacing={5} className="banner-comp-content">
           <Col className="banner-comp-content-right">
             <div className="img-header">
@@ -297,6 +293,14 @@ const BannerComp = () => {
             </div>
           </Col>
         </Row>
+        <ToastContainer position="bottom-end">
+          <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+            <Toast.Header>
+              <strong className="me-auto">Error</strong>
+            </Toast.Header>
+            <Toast.Body>{blockchain?.errorMsg}</Toast.Body>
+          </Toast>
+        </ToastContainer>
       </Container>
     </Container>
   )
