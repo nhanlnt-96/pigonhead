@@ -1,14 +1,14 @@
 import React from "react";
-import {Container} from "@mui/material";
 import {teamData} from "../../configs/teamData";
 import TitleComp from "../title/TitleComp";
 
 import "./TeamComp.scss";
 import {SiDiscord, SiInstagram, SiTwitter} from "react-icons/all";
+import {Container} from "react-bootstrap";
 
 const TeamComp = () => {
   return (
-    <Container className="team-comp comp-height" maxWidth>
+    <Container className="team-comp comp-height" fluid>
       <Container className="team-comp-container">
         <TitleComp title={"TEAM"}/>
         <div className="team-comp-content">

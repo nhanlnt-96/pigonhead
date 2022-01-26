@@ -13,12 +13,25 @@
   }
 }
 
-.faq-comp-container .css-1elwnq4-MuiPaper-root-MuiAccordion-root,.css-67l5gl {
+.faq-comp-container {
   background-color: transparent;
   box-shadow: unset;
-  border-top: 1px solid #ffffff;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  .accordion-item, .accordion-button {
+    background-color: transparent;
+    border: none;
+  }
+
+  .accordion-item:not(:first-child) {
+    border-top: 1px solid #ffffff;
+  }
+
+  .accordion-button {
+    font-weight: bold;
+    box-shadow: unset !important;
+  }
 }
 
 .faq-comp-container .accordion-toggle {
@@ -38,17 +51,5 @@
     &:nth-child(2) {
       transform: rotate(90deg);
     }
-  }
-}
-
-.css-yw020d-MuiAccordionSummary-expandIconWrapper, .css-1fx8m19 {
-  transform: unset !important;
-  -webkit-transition: unset !important;
-  transition: unset !important;
-}
-
-.Mui-expanded, .css-67l5gl.Mui-expanded{
-  .accordion-toggle-line:nth-child(2) {
-    transform: rotate(180deg);
   }
 }

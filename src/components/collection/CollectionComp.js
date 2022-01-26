@@ -14,12 +14,12 @@ const CollectionComp = () => {
       <div className="slider-container">
         <SlideShowComp/>
       </div>
-      <div className="slider-container">
-        <SlideShowComp/>
-      </div>
-      <div className="slider-container">
-        <SlideShowComp/>
-      </div>
+      {/*<div className="slider-container">*/}
+      {/*  <SlideShowComp/>*/}
+      {/*</div>*/}
+      {/*<div className="slider-container">*/}
+      {/*  <SlideShowComp/>*/}
+      {/*</div>*/}
     </Container>
   );
 };
