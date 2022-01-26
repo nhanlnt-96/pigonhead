@@ -10,10 +10,16 @@ const CollectionComp = () => {
     <Container className="collection-comp comp-height" fluid>
       <Container className="collection-comp-container">
         <TitleComp title={"COLLECTION"}/>
-        <div className="slider-container">
-          <SlideShowComp/>
-        </div>
       </Container>
+      <div className="slider-container">
+        <SlideShowComp/>
+      </div>
+      <div className="slider-container">
+        <SlideShowComp/>
+      </div>
+      <div className="slider-container">
+        <SlideShowComp/>
+      </div>
     </Container>
   );
 };

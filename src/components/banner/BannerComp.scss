@@ -173,6 +173,7 @@
 
     .content-right-bottom {
       @include flex-center;
+      margin-top: 24px;
 
       .button-footer {
         margin-top: 24px;
