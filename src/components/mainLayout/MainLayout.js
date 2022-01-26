@@ -1,47 +1,34 @@
 import React from "react";
-import {CssBaseline, Fab} from "@mui/material";
-import ScrollToTop from "./components/ScrollToTop";
-import {BiUpArrow} from "react-icons/all";
-import PropTypes from "prop-types";
 import BannerComp from "../banner/BannerComp";
 import AboutComp from "../about/AboutComp";
-import RoadmapComp from "../roadmap/RoadmapComp";
+// import RoadmapComp from "../roadmap/RoadmapComp";
 import CollectionComp from "../collection/CollectionComp";
-import FAQComp from "../faq/FAQComp";
-import TeamComp from "../team/TeamComp";
+// import FAQComp from "../faq/FAQComp";
+// import TeamComp from "../team/TeamComp";
+import {Container, Row} from "react-bootstrap";
 
-ScrollToTop.propTypes = {
-  children: PropTypes.element.isRequired,
-};
-
-const MainLayout = (props) => {
+const MainLayout = () => {
   return (
-    <React.Fragment>
-      <CssBaseline/>
-      <div id="home">
+    <Container fluid className="main-layout">
+      <Row id="home">
         <BannerComp/>
-      </div>
-      <div id="about">
+      </Row>
+      <Row id="about">
         <AboutComp/>
-      </div>
-      <div id="collection">
+      </Row>
+      <Row id="collection">
         <CollectionComp/>
-      </div>
-      <div id="roadmap">
-        <RoadmapComp/>
-      </div>
-      <div id="team">
-        <TeamComp/>
-      </div>
-      <div id="faq">
-        <FAQComp/>
-      </div>
-      <ScrollToTop {...props}>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
-          <BiUpArrow/>
-        </Fab>
-      </ScrollToTop>
-    </React.Fragment>
+      </Row>
+      {/*<Row id="roadmap">*/}
+      {/*  <RoadmapComp/>*/}
+      {/*</Row>*/}
+      {/*<Row id="team">*/}
+      {/*  <TeamComp/>*/}
+      {/*</Row>*/}
+      {/*<Row id="faq">*/}
+      {/*  <FAQComp/>*/}
+      {/*</Row>*/}
+    </Container>
   );
 };
 

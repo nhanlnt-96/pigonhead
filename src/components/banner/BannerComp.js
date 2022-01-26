@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Alert, Box, Container, Grid, Snackbar} from "@mui/material";
 import HeaderComp from "../header/HeaderComp";
-// import TypewriterComponent from "typewriter-effect";
 import {CountDownComp} from "./components/CountDownComp";
 import BannerImg from "../../assets/imgs/bannerImg.jpeg";
 import {useDispatch, useSelector} from "react-redux";
@@ -11,10 +9,9 @@ import {connect} from "../../redux/blockchain/blockchainActions";
 import {ResponsiveWrapper, StyledButton, StyledLink, StyledRoundButton, truncate} from "./styleComponent";
 
 import "./BannerComp.scss";
+import {Col, Container, Row} from "react-bootstrap";
 
 const BannerComp = () => {
-  const [showLeftTopContent, setShowLeftTopContent] = useState(false);
-  const [showSnackbar, setShowSnackbar] = useState(false);
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
@@ -112,31 +109,19 @@ const BannerComp = () => {
   useEffect(() => {
     getData();
   }, [blockchain.account]);
-  useEffect(() => {
-    if (blockchain.errorMsg) {
-      setShowSnackbar(true);
-      setTimeout(() => {
-        setShowSnackbar(false);
-      }, 2000);
-    }
-  }, [blockchain.errorMsg]);
   return (
-    <Container className="banner-comp comp-height" maxWidth>
+    <Container className="banner-comp comp-height" fluid>
       <HeaderComp/>
       <Container className="banner-comp-container">
-        <Snackbar anchorOrigin={{vertical: "bottom", horizontal: "right"}} open={showSnackbar} onClose={!showSnackbar}
-                  autoHideDuration={2000}>
-          <Alert severity="error">{blockchain.errorMsg}</Alert>
-        </Snackbar>
-        <Grid container spacing={5} className="banner-comp-content">
-          <Grid item className="banner-comp-content-right">
-            <Box className="img-header">
+        <Row container spacing={5} className="banner-comp-content">
+          <Col className="banner-comp-content-right">
+            <div className="img-header">
               <img src={BannerImg} alt="pigeonheader"/>
-            </Box>
-            <Box className="countdown-section">
+            </div>
+            <div className="countdown-section">
               <CountDownComp/>
-            </Box>
-            <Box className="content-right-bottom">
+            </div>
+            <div className="content-right-bottom">
               {
                 !blockchain.account ? (
                   <div className="button-footer">
@@ -301,9 +286,9 @@ const BannerComp = () => {
                   </ResponsiveWrapper>
                 )
               }
-            </Box>
-          </Grid>
-        </Grid>
+            </div>
+          </Col>
+        </Row>
       </Container>
     </Container>
   )

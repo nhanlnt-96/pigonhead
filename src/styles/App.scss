@@ -9,7 +9,7 @@
 .comp-height {
   position: relative;
   min-height: 100vh;
-  padding-top: 79px;
+  padding-top: 72px;
   padding-bottom: 24px;
   @include mobile {
     padding-top: 56px !important;
@@ -50,8 +50,4 @@
     height: 256px;
     bottom: -255px;
   }
-}
-
-.css-mgur8 {
-  z-index: 1;
 }

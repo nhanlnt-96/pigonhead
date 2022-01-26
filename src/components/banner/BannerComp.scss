@@ -5,10 +5,12 @@
   background-color: $primary-color;
 
   &-container {
-    padding-top: 24px;
-    min-height: calc(100vh - 79px - 24px);
+    min-height: calc(100vh - 48px - 24px);
     @include flex-center;
-    @include mobile {
+  }
+
+  @include mobile {
+    &-container {
       min-height: calc(100vh - 56px - 24px);
       padding-right: 0 !important;
       padding-left: 0 !important;
@@ -37,19 +39,6 @@
       border-radius: 30px;
       padding: 10px 15px;
       min-height: 350px;
-
-      .Typewriter__wrapper, .Typewriter__cursor {
-        font-size: 45px;
-        @include mobile {
-          font-size: 30px;
-        }
-      }
-
-      .Typewriter__wrapper {
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: bold;
-      }
 
       .content {
         margin-top: 12px;
@@ -82,14 +71,7 @@
     }
 
     .countdown-section {
-      //min-height: 200px;
       margin-top: 24px;
-      //@include smallScreen {
-      //  min-height: 200px !important;
-      //}
-      //@include mobile {
-      //  min-height: 220px;
-      //}
     }
 
     .countdown-section .countdown-container {
@@ -190,7 +172,6 @@
     }
 
     .content-right-bottom {
-      //margin-top: 24px;
       @include flex-center;
 
       .button-footer {
@@ -207,6 +188,7 @@
           background-color: rgba(134, 139, 141, 1);
           transition: .5s;
           overflow: hidden;
+          text-decoration: none;
 
           &:hover {
             background-color: $fifth-color;

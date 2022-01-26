@@ -1,15 +1,15 @@
 import React from "react";
-import {Box, Container} from "@mui/material";
+import {Container} from "react-bootstrap";
 
 import "./TitleComp.scss";
 
 const TitleComp = ({title}) => {
   return (
-    <Container className="title-comp" maxWidth>
+    <Container className="title-comp" fluid>
       <Container className="title-comp-container">
-        <Box className="title-box-container">
+        <div className="title-box-container">
           <h6 className="title">{title}</h6>
-        </Box>
+        </div>
       </Container>
     </Container>
   );

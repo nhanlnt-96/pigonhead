@@ -5,25 +5,46 @@
   background-color: transparent;
 
   &-menu {
+    width: 100%;
     justify-content: space-around;
-  }
 
-  &-menu-item {
-    @include flex-center;
-    color: #000000 !important;
-    transition: .2s !important;
-    width: 140px;
-    text-align: center;
+    .menu-item {
+      color: #000000 !important;
+      transition: .2s;
+      width: 140px;
+      text-align: center;
+      border-radius: 10px;
+      padding: 0 !important;
+      line-height: 36px;
 
-    &:nth-child(4) {
-      font-weight: bold;
-      font-size: 20px;
+      &:nth-child(4) {
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      &:hover {
+        background-color: #fff !important;
+        color: #000 !important;
+        letter-spacing: 5px;
+      }
     }
 
-    &:hover {
-      background-color: $fourth-color !important;
-      letter-spacing: 5px;
-      color: #ffffff !important;
+    @include mobile {
+      @include flex-center;
+      .menu-item {
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  &-container #responsive-navbar-nav {
+    @include mobile {
+      background-color: $fourth-color;
+    }
+    @include tablet {
+      background-color: $fourth-color;
     }
   }
 
@@ -36,6 +57,9 @@
     @include flex-center;
     border-radius: 10px !important;
     overflow: hidden !important;
+    color: unset !important;
+    border: unset !important;
+    display: none !important;
 
     .toggle-line {
       width: 30px !important;
@@ -44,20 +68,29 @@
       position: absolute;
       background-color: #ffffff;
       transition: .5s;
+      left: 5px;
 
       &:nth-child(1) {
         transform: translateY(-10px);
         width: 25px !important;
-        left: 5px;
       }
 
       &:nth-child(2) {
         transform: translateY(10px);
         width: 15px !important;
-        left: 5px;
       }
     }
 
+    &:focus {
+      outline: none !important;
+    }
+
+    @include mobile {
+      display: block !important;
+    }
+    @include tablet {
+      display: block !important;
+    }
   }
 
   .header-comp-toggle.active .toggle-line:nth-child(1) {
@@ -75,24 +108,27 @@
   .header-comp-toggle.active .toggle-line:nth-child(3) {
     transform: translateX(50px);
   }
-}
 
-.css-ilg2nx-MuiPaper-root-MuiAppBar-root, .css-6ehto {
-  background-color: $fourth-color !important;
-
-  .header-comp-menu-item {
-    &:hover {
-      background-color: #ffffff !important;
-      color: #000000 !important;
-      letter-spacing: 5px;
+  @include mobile {
+    &-container {
+      justify-content: flex-end !important;
     }
   }
-
-  .header-comp-toggle {
-    background-color: #ffffff !important;
-
-    .toggle-line {
-      background-color: #000;
+  @include tablet {
+    &-container {
+      justify-content: flex-end !important;
     }
   }
 }
+
+.header-active {
+  background-color: $fourth-color;
+  box-shadow: rgba(250, 250, 250, 0.2) 0 2px 8px 0;
+  -webkit-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+
+  .menu-item {
+    color: #ffffff !important;
+  }
+}
+

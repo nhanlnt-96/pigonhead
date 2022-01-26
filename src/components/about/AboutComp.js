@@ -1,18 +1,18 @@
 import React from "react";
-import {Container, Grid} from "@mui/material";
 import AboutCompImg from "../../assets/imgs/pigeonheadeSkateboard.png";
+import {Col, Container, Row} from "react-bootstrap";
 
 import "./AboutComp.scss";
 
 const AboutComp = () => {
   return (
-    <Container className="about-comp comp-height" maxWidth>
+    <Container className="about-comp comp-height" fluid>
       <Container className="about-comp-container">
-        <Grid container className="about-comp-content" spacing={5}>
-          <Grid lg={4} md={4} sm={12} className="about-comp-left" item>
+        <Row container className="about-comp-content">
+          <Col lg={4} md={4} sm={12} className="about-comp-left">
             <img src={AboutCompImg} alt="pigeonhead"/>
-          </Grid>
-          <Grid lg={8} md={8} sm={12} className="about-comp-right" item>
+          </Col>
+          <Col lg={8} md={8} sm={12} className="about-comp-right">
             <div className="title-container">
               <h2 className="title">Welcome to the Pigeonhead Flock</h2>
             </div>
@@ -28,8 +28,8 @@ const AboutComp = () => {
                 be held in New York, LA and Miami with more cities to come. All airdrops will be limited and there will
                 be no re-releases.</p>
             </div>
-          </Grid>
-        </Grid>
+          </Col>
+        </Row>
       </Container>
     </Container>
   );
